@@ -1,0 +1,11 @@
+---
+- name: "Play 1: Network Backup for Cisco NX-OS"
+  hosts: switches
+  connection: network_cli
+  tasks:
+    - name: "Task 1: Backup configuration"
+      nxos_config:
+        backup: yes
+        backup_options:
+          filename: running-config.txt
+          dir_path: /home/bking/network_backups/{{ inventory_hostname }}

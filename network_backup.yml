@@ -1,0 +1,23 @@
+---
+- name: "Play 1: Network Backup for Cisco IOS"
+  hosts: routers
+  connection: network_cli
+  tasks:
+    - name: "Task 1: Backup configuration"
+      ios_config:
+        backup: yes
+        backup_options:
+          filename: "{{ inventory_hostname }}-running-config.txt"
+          dir_path: /home/bking/network_backups/{{ group_names[1] }}
+
+
+- name: "Play 2: Network Backup for Cisco NX-OS"
+  hosts: switches
+  connection: network_cli
+  tasks:
+    - name: "Task 1: Backup configuration"
+      nxos_config:
+        backup: yes
+        backup_options:
+          filename: "{{ inventory_hostname }}-running-config.txt"
+          dir_path: /home/bking/network_backups/{{ group_names[1] }}

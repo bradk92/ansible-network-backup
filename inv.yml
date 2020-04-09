@@ -1,0 +1,14 @@
+---
+all:
+  children:
+    routers:
+      children:
+        colo1:
+          hosts:
+            192.168.0.59:
+        colo1:
+          hosts:
+            192.168.0.79:
+#    switches:
+#      hosts:
+#        192.168.0.79:
