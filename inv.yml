@@ -3,12 +3,14 @@ all:
   children:
     routers:
       children:
-        colo1:
+        ios:
           hosts:
             192.168.0.59:
-        colo1:
+        iosxr:
+          hosts:
+           # 192.168.0.xx:
+    switches:
+      children:
+        nxos: 
           hosts:
             192.168.0.79:
-#    switches:
-#      hosts:
-#        192.168.0.79:

@@ -1,0 +1,4 @@
+---
+ansible_network_os: "nxos"
+ansible_user: "ansible"
+ansible_password: "ansible"

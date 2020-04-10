@@ -8,7 +8,7 @@
         backup: yes
         backup_options:
           filename: "{{ inventory_hostname }}-running-config.txt"
-          dir_path: /home/bking/network_backups/{{ group_names[1] }}
+          dir_path: /home/bking/network_backups/{{ group_names[0] }}
 
 
 - name: "Play 2: Network Backup for Cisco NX-OS"
@@ -20,4 +20,5 @@
         backup: yes
         backup_options:
           filename: "{{ inventory_hostname }}-running-config.txt"
-          dir_path: /home/bking/network_backups/{{ group_names[1] }}
+          dir_path: /home/bking/network_backups/{{ group_names[0] }}
+      register: nxos_backup
